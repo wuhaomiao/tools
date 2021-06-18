@@ -16,8 +16,8 @@ func GetDate() string {
 	return nowTime
 }
 
-// 获取用户输入字符串
-func inputStr(info string) (text string) {
+// InputStr 获取用户输入字符串
+func InputStr(info string) (text string) {
 	fmt.Print(info)
 	reader := bufio.NewReader(os.Stdin)
 	text, err := reader.ReadString('\n')
