@@ -59,7 +59,7 @@ func PrintfRed(str interface{}) {
 }
 
 func PrintBlue(str interface{}) {
-	fmt.Println(blue, str, reset)
+	fmt.Print(blue, str, reset)
 }
 
 func PrintlnBlue(str interface{}) {
