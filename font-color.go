@@ -22,15 +22,15 @@ var (
 	//disableColor = false
 )
 
-func PrintGreen(str string) {
+func PrintGreen(str interface{}) {
 	fmt.Print(green, str, reset)
 }
 
-func PrintlnGreen(str string) {
+func PrintlnGreen(str interface{}) {
 	fmt.Println(green, str, reset)
 }
 
-func PrintfGreen(str string) {
+func PrintfGreen(str interface{}) {
 	fmt.Printf(green, str, reset)
 }
 
@@ -38,34 +38,34 @@ func PrintYellow(str interface{}) {
 	fmt.Print(yellow, str, reset)
 }
 
-func PrintlnYellow(str string) {
+func PrintlnYellow(str interface{}) {
 	fmt.Println(yellow, str, reset)
 }
 
-func PrintfYellow(str string) {
+func PrintfYellow(str interface{}) {
 	fmt.Printf(yellow, str, reset)
 }
 
-func PrintRed(str string) {
+func PrintRed(str interface{}) {
 	fmt.Print(red, str, reset)
 }
 
-func PrintlnRed(str string) {
+func PrintlnRed(str interface{}) {
 	fmt.Println(red, str, reset)
 }
 
-func PrintfRed(str string) {
+func PrintfRed(str interface{}) {
 	fmt.Printf(red, str, reset)
 }
 
-func PrintBlue(str string) {
+func PrintBlue(str interface{}) {
 	fmt.Println(blue, str, reset)
 }
 
-func PrintlnBlue(str string) {
+func PrintlnBlue(str interface{}) {
 	fmt.Println(blue, str, reset)
 }
 
-func PrintfBlue(str string) {
+func PrintfBlue(str interface{}) {
 	fmt.Printf(blue, str, reset)
 }
