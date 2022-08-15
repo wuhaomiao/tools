@@ -29,7 +29,7 @@ func InputStr(userInput string) string {
 	return text
 }
 
-// InputInt 用户输入正整数
+// InputInt 用户输入正整数。 -1: 代表用户输入有误。-2: 代表用户直接回车。
 func InputInt(userInput string) int {
 	for i := 0; i < 5; i++ {
 		fmt.Print(userInput)
@@ -39,6 +39,9 @@ func InputInt(userInput string) int {
 			log.Fatalln("输入有误: ", err)
 		}
 		text = strings.TrimSpace(text)
+		if text == ""{
+			return -2    // 如果直接回车，返回-2
+		}
 		num, err := strconv.Atoi(text)
 		if err != nil {
 			PrintlnYellow("错误: 你输入的不是数字")
