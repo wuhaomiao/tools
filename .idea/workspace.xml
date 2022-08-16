@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffb55f4d-e7e4-40c6-9464-3ba1daa09720" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/user-input.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/font-color.go" beforeDir="false" afterPath="$PROJECT_DIR$/font-color.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools.go" beforeDir="false" afterPath="$PROJECT_DIR$/tools.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-input.go" beforeDir="false" afterPath="$PROJECT_DIR$/user-input.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +58,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

@@ -48,6 +48,36 @@ func InputInt(userInput string) int {
 	return -1
 }
 
+// InputIntMax 用户输入范围内正整数。 -1: 代表用户输入有误。-2: 代表用户直接回车。
+func InputIntMax(userInput string, minInt,maxInt int) int {
+	for i := 0; i < 5; i++ {
+		fmt.Print(userInput)
+		reader := bufio.NewReader(os.Stdin)
+		text, err := reader.ReadString('\n')
+		if err != nil {
+			log.Fatalln("输入有误: ", err)
+		}
+		text = strings.TrimSpace(text)
+		if text == "" {
+			return -2 // 如果直接回车，返回-2
+		}
+		num, err := strconv.Atoi(text)
+		if err != nil {
+			PrintlnYellow("错误: 你输入的不是数字")
+			continue // 如果输入的不是数字, 返回-1
+		}
+		if num < minInt {
+			PrintlnRed("错误: 不能小于最小值")
+			continue
+		}
+		if num > maxInt{
+			PrintlnRed("错误: 不能大于最大值")
+		}
+		return num
+	}
+	return -1
+}
+
 // ChooseYes 用户输入[y/n], 返回bool值，true为yes，false为no.
 func ChooseYes(userInput string) bool {
 	for i := 0; i < 5; i++ {
