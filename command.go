@@ -28,3 +28,14 @@ func CMD(shell string) error {
 	}
 	return nil
 }
+
+// NewCMD shell实时输出
+func NewCMD(shell string) error {
+	cmd := exec.Command("/bin/bash", "-c", shell)
+	cmd.Stdout = os.Stdout
+	if err := cmd.Run(); err != nil {
+		fmt.Println("shell命令执行失败: ", err)
+		return err
+	}
+	return nil
+}
