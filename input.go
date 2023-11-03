@@ -1,4 +1,4 @@
-package gtools
+package tools
 
 import (
 	"bufio"
@@ -36,11 +36,11 @@ func InputInt(userInput string) int {
 		}
 		num, err := strconv.Atoi(text)
 		if err != nil {
-			PrintlnYellow("错误: 你输入的不是数字")
+			NewPrint("错误: 你输入的不是数字\n").Yellow()
 			continue // 如果输入的不是数字, 返回-1
 		}
 		if num < 0 {
-			PrintlnRed("错误: 请输入正整数")
+			NewPrint("错误: 请输入正整数\n")
 			continue
 		}
 		return num
@@ -49,7 +49,7 @@ func InputInt(userInput string) int {
 }
 
 // InputIntMax 用户输入范围内正整数。 -1: 代表用户输入有误。-2: 代表用户直接回车。
-func InputIntMax(userInput string, minInt,maxInt int) int {
+func InputIntMax(userInput string, minInt, maxInt int) int {
 	for i := 0; i < 5; i++ {
 		fmt.Print(userInput)
 		reader := bufio.NewReader(os.Stdin)
@@ -63,15 +63,15 @@ func InputIntMax(userInput string, minInt,maxInt int) int {
 		}
 		num, err := strconv.Atoi(text)
 		if err != nil {
-			PrintlnYellow("错误: 你输入的不是数字")
+			NewPrint("错误: 你输入的不是数字\n").Yellow()
 			continue // 如果输入的不是数字, 返回-1
 		}
 		if num < minInt {
-			PrintlnRed("错误: 不能小于最小值")
+			NewPrint("错误: 不能小于最小值\n").Red()
 			continue
 		}
-		if num > maxInt{
-			PrintlnRed("错误: 不能大于最大值")
+		if num > maxInt {
+			NewPrint("错误: 不能大于最大值\n").Red()
 		}
 		return num
 	}

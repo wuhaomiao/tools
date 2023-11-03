@@ -1,4 +1,4 @@
-package gtools
+package tools
 
 import (
 	"fmt"
@@ -11,4 +11,3 @@ func GetDate() string {
 	date := fmt.Sprint(now.Format("2006-01-02 15:04:05"))
 	return date
 }
-

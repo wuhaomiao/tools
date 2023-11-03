@@ -1,4 +1,4 @@
-package gtools
+package tools
 
 import (
 	"bufio"
