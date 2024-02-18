@@ -53,17 +53,21 @@ func NewPrintln(text interface{}) PrintlnColor {
 }
 
 func (p PrintlnColor) Red() {
-	fmt.Println(red, p.text, reset)
+	fmt.Print(red, p.text, reset)
+	fmt.Print("\n")
 }
 
 func (p PrintlnColor) Green() {
-	fmt.Println(green, p.text, reset)
+	fmt.Print(green, p.text, reset)
+	fmt.Print("\n")
 }
 
 func (p PrintlnColor) Blue() {
-	fmt.Println(blue, p.text, reset)
+	fmt.Print(blue, p.text, reset)
+	fmt.Print("\n")
 }
 
 func (p PrintlnColor) Yellow() {
-	fmt.Println(yellow, p.text, reset)
+	fmt.Print(yellow, p.text, reset)
+	fmt.Print("\n")
 }
