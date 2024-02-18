@@ -78,8 +78,8 @@ func InputIntMax(userInput string, minInt, maxInt int) int {
 	return -1
 }
 
-// ChooseYes 用户输入[y/n], 返回bool值，true为yes，false为no.
-func ChooseYes(userInput string) bool {
+// Choose 用户输入[y/n], 返回bool值，true为yes，false为no.
+func Choose(userInput string) bool {
 	for i := 0; i < 5; i++ {
 		fmt.Print(userInput)
 		reader := bufio.NewReader(os.Stdin)
