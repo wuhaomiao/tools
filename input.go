@@ -36,11 +36,11 @@ func InputInt(userInput string) int {
 		}
 		num, err := strconv.Atoi(text)
 		if err != nil {
-			NewPrint("错误: 你输入的不是数字\n").Yellow()
+			Print("错误: 你输入的不是数字\n").Yellow()
 			continue // 如果输入的不是数字, 返回-1
 		}
 		if num < 0 {
-			NewPrint("错误: 请输入正整数\n")
+			Print("错误: 请输入正整数\n")
 			continue
 		}
 		return num
@@ -63,15 +63,15 @@ func InputIntMax(userInput string, minInt, maxInt int) int {
 		}
 		num, err := strconv.Atoi(text)
 		if err != nil {
-			NewPrint("错误: 你输入的不是数字\n").Yellow()
+			Print("错误: 你输入的不是数字\n").Yellow()
 			continue // 如果输入的不是数字, 返回-1
 		}
 		if num < minInt {
-			NewPrint("错误: 不能小于最小值\n").Red()
+			Print("错误: 不能小于最小值\n").Red()
 			continue
 		}
 		if num > maxInt {
-			NewPrint("错误: 不能大于最大值\n").Red()
+			Print("错误: 不能大于最大值\n").Red()
 		}
 		return num
 	}
