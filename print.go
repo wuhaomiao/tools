@@ -18,7 +18,7 @@ type PrintColor struct {
 	text interface{}
 }
 
-func NewPrint(text interface{}) PrintColor {
+func Print(text interface{}) PrintColor {
 	var p PrintColor
 	p.text = text
 	return p
@@ -46,7 +46,7 @@ type PrintlnColor struct {
 	text interface{}
 }
 
-func NewPrintln(text interface{}) PrintlnColor {
+func Println(text interface{}) PrintlnColor {
 	var p PrintlnColor
 	p.text = text
 	return p
