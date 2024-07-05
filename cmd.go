@@ -40,3 +40,14 @@ func NewCMD(shell string) error {
 	}
 	return nil
 }
+
+// IsDirExists 判断目录是否存在, 不存刚创建目录
+func IsDirExists(dirPath string) error {
+	_, err := os.Stat(dirPath)
+	if os.IsNotExist(err) {
+		if err := os.MkdirAll(dirPath, 0755); err != nil {
+			return fmt.Errorf("无法创建目录： %v", err)
+		}
+	}
+	return nil
+}
