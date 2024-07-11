@@ -41,6 +41,25 @@ func NewCMD(shell string) error {
 	return nil
 }
 
+// ShellString 输出命令结果
+func ShellString(shell string) (string, error) {
+	cmd := exec.Command("/bin/bash", "-c", shell)
+	output, err := cmd.Output()
+	if err != nil {
+		return "", fmt.Errorf("命令执行失败: %v", err)
+	}
+	return string(output), nil
+}
+
+// ShellBool 输出命令结果
+func ShellBool(shell string) bool {
+	cmd := exec.Command("/bin/bash", "-c", shell)
+	if err := cmd.Run(); err != nil {
+		return false
+	}
+	return true
+}
+
 // IsDirExists 判断目录是否存在, 不存刚创建目录
 func IsDirExists(dirPath string) error {
 	_, err := os.Stat(dirPath)
