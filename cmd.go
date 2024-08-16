@@ -46,7 +46,7 @@ func ShellString(shell string) (string, error) {
 	cmd := exec.Command("/bin/bash", "-c", shell)
 	output, err := cmd.Output()
 	if err != nil {
-		return "", fmt.Errorf("命令执行失败: %v", err)
+		return "", fmt.Errorf("命令执行失败: %v\n", err)
 	}
 	return string(output), nil
 }
