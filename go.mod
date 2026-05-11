@@ -1,4 +1,4 @@
-module tools
+module github.com/wuhaomiao/tools
 
 go 1.22.5
 
